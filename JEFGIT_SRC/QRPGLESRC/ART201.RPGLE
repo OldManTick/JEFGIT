@@ -12,10 +12,9 @@
       **                                                               *
       **%E=============================================================*
       ** AUTHOR:                          00:00                        *
-
-      ** MODIFS: 02 JTICKNER   02/02/2022 23:01  FT.01.02    00/       *
+      ** MODIFS: 02 JTICKNER   02/02/2022 23:22  FT.01.02    00/       *
       **         01 JTICKNER   02/02/2022 22:41  FT.01.01    00/       *
-
+      **         01 ARCAD_PGMR 02/02/2022 23:19  01.01.00    00/       *
       *%ECSTD==========================================================*
 
      h dftactgrp(*no) bnddir('SAMPLE')
@@ -79,9 +78,7 @@
      d actctl          c                   'acc'
      d act             c                   'act'
       ** Sub-system . :                                                *
-
-      ** Function . . :  foo foo                                       *
-
+      ** Function . . :  foo foo foo foo                               *
       ** Sub-function :                                                *
       /free
        select;
@@ -199,28 +196,6 @@
          endsl;
        endsr;
 
-       //--- subfile from FT.01.01 test_branch----------------------------------
-       begsr s01chk2;
-         step01 = act;
-         err01 = *off;
-         sflnxtchg = *on;
-         readc(e) sfl01;
-         dow not %error and not %eof;
-           if opt01 <> 0 and opt01 <> 2;
-             step01 = dsp;
-             dspatr_ri = *on;
-             sflmsg = *on;
-             if not err01;
-               rrb01 = rrn01;
-               err01 = *on;
-             endif;
-           endif;
-           update sfl01;
-           dspatr_ri = *off;
-           readc(e) sfl01;
-         enddo;
-         sflnxtchg = *off;
-       endsr;
 
        //--- Format 02 Subroutines ------------------------------------     ---
        begsr pnl02;
