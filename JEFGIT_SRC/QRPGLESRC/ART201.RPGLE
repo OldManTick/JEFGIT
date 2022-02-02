@@ -1,3 +1,19 @@
+      *%CSTD===========================================================*
+      ** Application. : JEFGIT     Arcad Demo                          *
+      ** Component. . : ART201                        Type: RPGLE      *
+      **===============================================================*
+      ** Sub-system . :                                                *
+      ** Function . . :                                                *
+      ** Sub-function :                                                *
+      **%S=============================================================*
+      ** Description of functions:                                     *
+      **                                                               *
+      **                                                               *
+      **                                                               *
+      **%E=============================================================*
+      ** AUTHOR:                          00:00                        *
+      ** MODIFS: 01 ARCAD_PGMR 02/02/2022 22:15  FT.01.01    00/       *
+      *%ECSTD==========================================================*
 
      h dftactgrp(*no) bnddir('SAMPLE')
 
@@ -175,6 +191,28 @@
          endsl;
        endsr;
 
+       //--- subfile from FT.01.01 test_branch----------------------------------
+       begsr s01chk2;
+         step01 = act;
+         err01 = *off;
+         sflnxtchg = *on;
+         readc(e) sfl01;
+         dow not %error and not %eof;
+           if opt01 <> 0 and opt01 <> 2;
+             step01 = dsp;
+             dspatr_ri = *on;
+             sflmsg = *on;
+             if not err01;
+               rrb01 = rrn01;
+               err01 = *on;
+             endif;
+           endif;
+           update sfl01;
+           dspatr_ri = *off;
+           readc(e) sfl01;
+         enddo;
+         sflnxtchg = *off;
+       endsr;
 
        //--- Format 02 Subroutines ------------------------------------     ---
        begsr pnl02;
