@@ -12,7 +12,7 @@
       **                                                               *
       **%E=============================================================*
       ** AUTHOR:                          00:00                        *
-      ** MODIFS: 01 ARCAD_PGMR 02/02/2022 22:15  FT.01.01    00/       *
+      ** MODIFS: 01 JTICKNER   02/02/2022 22:41  FT.01.01    00/       *
       *%ECSTD==========================================================*
 
      h dftactgrp(*no) bnddir('SAMPLE')
@@ -75,6 +75,9 @@
      d chkctl          c                   'chc'
      d actctl          c                   'acc'
      d act             c                   'act'
+      ** Sub-system . :                                                *
+      ** Function . . :                                                *
+      ** Sub-function :                                                *
       /free
        select;
        when panel = 1;
