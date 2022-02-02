@@ -73,7 +73,7 @@
            05 F             PIC XX.
               88 F3         VALUE '03'.
               88 F12        VALUE '12'.
-      *    ATTENTION PAGEDOWN = 90 AND PAGEUP = 91 ALWAYS ]
+      *    ATTENTION PAGEDOWN = 90 AND PAGEUP = 91 ALWAYS !
               88 PAGEDOWN   VALUE '90'.
 
        01  END-OF-FILE          PIC X.
