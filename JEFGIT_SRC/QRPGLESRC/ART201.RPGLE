@@ -1,3 +1,21 @@
+      *%CSTD===========================================================*
+      ** Application. : JEFGIT     Arcad Demo                          *
+      ** Component. . : ART201                        Type: RPGLE      *
+      **===============================================================*
+      ** Sub-system . :                                                *
+      ** Function . . :                                                *
+      ** Sub-function :                                                *
+      **%S=============================================================*
+      ** Description of functions:                                     *
+      **                                                               *
+      **                                                               *
+      **                                                               *
+      **%E=============================================================*
+      ** AUTHOR:                          00:00                        *
+      ** MODIFS: 02 JTICKNER   02/02/2022 23:22  FT.01.02    00/       *
+      **         01 JTICKNER   02/02/2022 22:41  FT.01.01    00/       *
+      **         01 ARCAD_PGMR 02/02/2022 23:19  01.01.00    00/       *
+      *%ECSTD==========================================================*
 
      h dftactgrp(*no) bnddir('SAMPLE')
 
@@ -59,6 +77,9 @@
      d chkctl          c                   'chc'
      d actctl          c                   'acc'
      d act             c                   'act'
+      ** Sub-system . :                                                *
+      ** Function . . :  foo foo foo foo                               *
+      ** Sub-function :                                                *
       /free
        select;
        when panel = 1;
