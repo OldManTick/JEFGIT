@@ -76,7 +76,7 @@
      d actctl          c                   'acc'
      d act             c                   'act'
       ** Sub-system . :                                                *
-      ** Function . . :                                                *
+      ** Function . . :            oof                                    *
       ** Sub-function :                                                *
       /free
        select;
