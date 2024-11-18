@@ -79,6 +79,8 @@
      d act             c                   'act'
       ** Sub-system . :                                                *
       ** Function . . :  foo foo foo foo                               *
+      ** Function . . :  foo foo foo foo                               *
+      ** Function . . :  foo foo foo foo                               *
       ** Sub-function :                                                *
       /free
        select;
