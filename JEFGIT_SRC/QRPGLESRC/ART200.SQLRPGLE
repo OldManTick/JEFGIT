@@ -50,6 +50,7 @@
      d User            s             10    inz(*user)
      d count           s              3i 0
      d mode            s              3
+     d NewId4          s              6  0
 
      d crt             c                   'CRT'
      d upd             c                   'UPD'
