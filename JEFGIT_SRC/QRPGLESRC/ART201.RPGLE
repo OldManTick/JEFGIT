@@ -190,7 +190,7 @@
            opt01 = 0;
            update sfl01;
          other;
-
+           update sfl01;
          endsl;
        endsr;
 
