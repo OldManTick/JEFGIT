@@ -46,7 +46,9 @@
      d savId           s                   like(arid)
      d savDesc         s                   like(ardesc)
      d NewId           s              6  0
+     d NewId3          s              6  0
      d NewId2          s              6  0
+
      d User            s             10    inz(*user)
      d count           s              3i 0
      d mode            s              3
@@ -244,6 +246,7 @@
            setgt *hival article1;
            readp article1;
            Newid = %dec(arid :6: 0)  +1;
+           NewId3 = NewId;
            NewId2 = NewId;
            reset farti;
            arid = %editc(NewId:'X');
