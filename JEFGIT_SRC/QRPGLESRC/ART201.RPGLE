@@ -194,7 +194,7 @@
            opt01 = 0;
            update sfl01;
          other;
-
+           errDesc = 'foo';
          endsl;
        endsr;
 
