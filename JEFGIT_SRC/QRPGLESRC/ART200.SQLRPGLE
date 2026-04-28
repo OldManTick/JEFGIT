@@ -46,7 +46,9 @@
      d savId           s                   like(arid)
      d savDesc         s                   like(ardesc)
      d NewId           s              6  0
+     d NewId3          s              6  0
      d NewId2          s              6  0
+
      d User            s             10    inz(*user)
      d count           s              3i 0
      d mode            s              3
@@ -73,7 +75,7 @@
        other;
          exsr pnl00;
        endsl;
-       //- Subfiles  01 Subroutines --------------------------------------  ---
+       //- Subfiles  01 Subroutines -----------change 5-------------------  ---
        begsr pnl01;
          select ;
          when step01 = prp ;
@@ -246,6 +248,7 @@
            setgt *hival article1;
            readp article1;
            Newid = %dec(arid :6: 0)  +1;
+           NewId3 = NewId;
            NewId2 = NewId;
            reset farti;
            arid = %editc(NewId:'X');
